@@ -11,7 +11,9 @@ export default function Texto(props) {
           setTam(64);
         } else if (props.tam === "Medio") {
           setTam(40);
-        } else if (props.tam === "Subtitle") {
+        } else if (props.tam === "Botao") {
+          setTam(28);
+        }else if (props.tam === "Subtitle") {
           setTam(24);
         }
       }, [props.tam]);

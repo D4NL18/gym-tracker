@@ -5,6 +5,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 import Texto from './src/components/Texto/Texto';
 import InputAndLabel from './src/components/InputAndLabel/InputAndLabel';
+import Button from './src/components/Button/Button';
 
 
 
@@ -37,7 +38,8 @@ export default function App() {
       <Texto texto="Login" tam="Grande" />
       <InputAndLabel texto="Nome" placeholder="Daniel" items={items} />
       <InputAndLabel texto="E-mail" placeholder="email@email.com" items={items} tipo="Select" />
-      <InputAndLabel texto="Senha" placeholder="senha" items={items} tipo="Senha" />
+      <InputAndLabel texto="Senha" placeholder="Senha" items={items} tipo="Senha" />
+      <Button texto="Entrar" />
       <StatusBar style="auto" />
     </LinearGradient>
   );

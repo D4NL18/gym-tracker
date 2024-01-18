@@ -1,8 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { useFonts } from 'expo-font';
-import TituloGrande from './src/components/TituloGrande/TituloGrande';
 import { LinearGradient } from 'expo-linear-gradient';
+
+import TituloGrande from './src/components/TituloGrande/TituloGrande';
+import TituloMedio from './src/components/TituloMedio/TituloMedio';
+
 
 export default function App() {
 
@@ -25,6 +28,7 @@ export default function App() {
       style={styles.container}
     >
       <TituloGrande texto="Login" />
+      <TituloMedio texto="Login" />
       <StatusBar style="auto" />
     </LinearGradient>
   );

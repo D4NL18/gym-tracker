@@ -1,9 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { useFonts } from 'expo-font';
 import { LinearGradient } from 'expo-linear-gradient';
 
 import Texto from './src/components/Texto/Texto';
+import InputAndLabel from './src/components/InputAndLabel/InputAndLabel';
 
 
 
@@ -15,6 +16,12 @@ export default function App() {
   if (!fontsLoaded) {
     return undefined
   }
+
+  items = [
+    { label: 'Footbal', value: 'footballl' },
+    { label: 'Baseball', value: 'baseball' },
+    { label: 'Hockey', value: 'hockey' },
+  ]
   return (
     <LinearGradient
       colors={[
@@ -28,6 +35,9 @@ export default function App() {
       style={styles.container}
     >
       <Texto texto="Login" tam="Grande" />
+      <InputAndLabel texto="Nome" placeholder="Daniel" items={items} />
+      <InputAndLabel texto="E-mail" placeholder="email@email.com" items={items} tipo="Select" />
+      <InputAndLabel texto="Senha" placeholder="senha" items={items} tipo="Senha" />
       <StatusBar style="auto" />
     </LinearGradient>
   );
@@ -37,6 +47,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: "center"
   },
 });

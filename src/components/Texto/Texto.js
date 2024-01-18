@@ -1,11 +1,7 @@
 import {Text, StyleSheet} from "react-native"
 import { useState, useEffect } from "react"
 
-
-
-
-
-export default function TituloGrande(props) {
+export default function Texto(props) {
 
     const [tam, setTam] = useState(24)
 
@@ -17,8 +13,6 @@ export default function TituloGrande(props) {
           setTam(40);
         } else if (props.tam === "Subtitle") {
           setTam(24);
-        } else if (props.tam === "Label") {
-          setTam(16);
         }
       }, [props.tam]);
     
@@ -32,6 +26,6 @@ const styles = StyleSheet.create({
     texto: {
       fontFamily: 'KeaniaOne-Regular',
       color: 'white',
-      textAlign: 'center'
+      textAlign: 'center',
     },
 });

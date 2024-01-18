@@ -5,6 +5,8 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 import TituloGrande from './src/components/TituloGrande/TituloGrande';
 import TituloMedio from './src/components/TituloMedio/TituloMedio';
+import Subtitle from './src/components/Subtitle/Subtitle';
+
 
 
 export default function App() {
@@ -29,6 +31,7 @@ export default function App() {
     >
       <TituloGrande texto="Login" />
       <TituloMedio texto="Login" />
+      <Subtitle texto="Login" />
       <StatusBar style="auto" />
     </LinearGradient>
   );

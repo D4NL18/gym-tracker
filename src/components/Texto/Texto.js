@@ -26,6 +26,6 @@ const styles = StyleSheet.create({
     texto: {
       fontFamily: 'KeaniaOne-Regular',
       color: 'white',
-      textAlign: 'center'
+      textAlign: 'center',
     },
 });

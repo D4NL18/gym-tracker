@@ -6,13 +6,13 @@ export default function InputAndLabel(props) {
     return(
         <View style={styles.container}>
             <Label texto={props.texto} />
-            <Input />
+            <Input tipo={props.tipo} placeholder={props.placeholder} items={props.items} />
         </View>
     )
 }
 
 const styles = StyleSheet.create({
     container: {
-        marginVertical: 25
+        marginVertical: 0
     },
 });

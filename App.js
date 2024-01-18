@@ -3,9 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { useFonts } from 'expo-font';
 import { LinearGradient } from 'expo-linear-gradient';
 
-import TituloGrande from './src/components/TituloGrande/TituloGrande';
-import TituloMedio from './src/components/TituloMedio/TituloMedio';
-import Subtitle from './src/components/Subtitle/Subtitle';
+import Texto from './src/components/Texto/Texto';
 
 
 
@@ -29,9 +27,7 @@ export default function App() {
       locations={[0, 0.25, 0.5, 0.75, 1]}
       style={styles.container}
     >
-      <TituloGrande texto="Login" />
-      <TituloMedio texto="Login" />
-      <Subtitle texto="Login" />
+      <Texto texto="Login" tam="Grande" />
       <StatusBar style="auto" />
     </LinearGradient>
   );

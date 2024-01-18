@@ -1,9 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { useFonts } from 'expo-font';
 import { LinearGradient } from 'expo-linear-gradient';
 
 import Texto from './src/components/Texto/Texto';
+import Input from './src/components/Input/Input';
 
 
 
@@ -28,6 +29,7 @@ export default function App() {
       style={styles.container}
     >
       <Texto texto="Login" tam="Grande" />
+      <Input />
       <StatusBar style="auto" />
     </LinearGradient>
   );

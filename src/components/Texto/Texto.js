@@ -1,11 +1,7 @@
 import {Text, StyleSheet} from "react-native"
 import { useState, useEffect } from "react"
 
-
-
-
-
-export default function TituloGrande(props) {
+export default function Texto(props) {
 
     const [tam, setTam] = useState(24)
 

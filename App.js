@@ -4,7 +4,7 @@ import { useFonts } from 'expo-font';
 import { LinearGradient } from 'expo-linear-gradient';
 
 import Texto from './src/components/Texto/Texto';
-import Input from './src/components/Input/Input';
+import InputAndLabel from './src/components/InputAndLabel/InputAndLabel';
 
 
 
@@ -29,7 +29,7 @@ export default function App() {
       style={styles.container}
     >
       <Texto texto="Login" tam="Grande" />
-      <Input />
+      <InputAndLabel texto="E-mail" />
       <StatusBar style="auto" />
     </LinearGradient>
   );

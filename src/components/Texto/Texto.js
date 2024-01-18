@@ -13,8 +13,6 @@ export default function Texto(props) {
           setTam(40);
         } else if (props.tam === "Subtitle") {
           setTam(24);
-        } else if (props.tam === "Label") {
-          setTam(16);
         }
       }, [props.tam]);
     

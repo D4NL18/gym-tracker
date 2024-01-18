@@ -9,7 +9,7 @@ export default function TituloGrande(props) {
 
 const styles = StyleSheet.create({
     texto: {
-      fontSize: 64,
+      fontSize: 40,
       fontFamily: 'KeaniaOne-Regular',
       color: 'white',
       textAlign: 'center'

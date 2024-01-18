@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { StyleSheet, Dimensions, View, Image, TextInput } from "react-native";
 import RNPickerSelect from 'react-native-picker-select';
 
-const width = Dimensions.get('window').width;
+import { width } from "../Sizes/Sizes";
 
 export default function Input(props) {
   const [selectedValue, setSelectedValue] = useState(null);
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     height: 50,
     borderWidth: 1,
     borderRadius: 7,
-    borderColor: 'gray',
+    borderColor: 'black',
     overflow: 'hidden',
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },

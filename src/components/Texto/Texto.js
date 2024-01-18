@@ -11,14 +11,18 @@ export default function Texto(props) {
           setTam(64);
         } else if (props.tam === "Medio") {
           setTam(40);
-        } else if (props.tam === "Subtitle") {
+        } else if (props.tam === "Botao") {
+          setTam(28);
+        }else if (props.tam === "Subtitle") {
           setTam(24);
+        }else if (props.tam === "TextButton") {
+          setTam(16);
         }
       }, [props.tam]);
     
 
     return(
-        <Text style={[styles.texto, {fontSize: tam}]}>{props.texto}</Text>
+        <Text style={[styles.texto, {fontSize: tam, textDecorationLine: tam == 16 ? 'underline' : "none"}]}>{props.texto}</Text>
     )
 }
 
@@ -27,5 +31,6 @@ const styles = StyleSheet.create({
       fontFamily: 'KeaniaOne-Regular',
       color: 'white',
       textAlign: 'center',
+      
     },
 });

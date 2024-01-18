@@ -4,15 +4,9 @@ import Label from '../Label/Label'
 
 export default function InputAndLabel(props) {
     return(
-        <View style={styles.container}>
+        <View>
             <Label texto={props.texto} />
             <Input tipo={props.tipo} placeholder={props.placeholder} items={props.items} />
         </View>
     )
 }
-
-const styles = StyleSheet.create({
-    container: {
-        marginVertical: 0
-    },
-});

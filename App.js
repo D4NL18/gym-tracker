@@ -7,6 +7,7 @@ import Texto from './src/components/Texto/Texto';
 import InputAndLabel from './src/components/InputAndLabel/InputAndLabel';
 import Button from './src/components/Button/Button';
 import TextButton from './src/components/TextButton/TextButton';
+import ItemTable from './src/components/ItemTable/ItemTable';
 
 
 
@@ -37,12 +38,14 @@ export default function App() {
       style={styles.container}
     >
       <Texto texto="Login" tam="Grande" />
-      <InputAndLabel texto="Nome" placeholder="Daniel" items={items} />
+      {/* <InputAndLabel texto="Nome" placeholder="Daniel" items={items} />
       <InputAndLabel texto="E-mail" placeholder="email@email.com" items={items} tipo="Select" />
       <InputAndLabel texto="Senha" placeholder="Senha" items={items} tipo="Senha" />
       <Button texto="Entrar" />
       <TextButton texto="Não possui uma conta? Cadastre-se agora!" />
-      <TextButton texto="Esqueceu sua senha? Recupere ela aqui!" />
+      <TextButton texto="Esqueceu sua senha? Recupere ela aqui!" /> */}
+      <ItemTable exercicio="Supino Retoaaaaaaaa" carga="20" />
+      <ItemTable exercicio="Supino Reto" carga="20" />
       <StatusBar style="auto" />
     </LinearGradient>
   );

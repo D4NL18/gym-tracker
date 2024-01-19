@@ -31,6 +31,5 @@ const styles = StyleSheet.create({
       fontFamily: 'KeaniaOne-Regular',
       color: 'white',
       textAlign: 'center',
-      
     },
 });

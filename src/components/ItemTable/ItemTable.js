@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: "space-between",
         alignItems: "center",
-        width: width * 0.8,
+        width: width * 0.9,
         paddingVertical: 5,
         borderWidth: 1,
         borderRadius: 7,
@@ -38,6 +38,6 @@ const styles = StyleSheet.create({
     divider: {
         height: '100%',
         width: 1,
-        backgroundColor: 'black'
+        backgroundColor: 'white'
     }
 })

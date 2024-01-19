@@ -2,6 +2,7 @@ import { StyleSheet, View } from "react-native";
 
 import { width } from "../Sizes/Sizes";
 import Texto from '../Texto/Texto'
+import Divider from "../Divider/Divider";
 
 export default function ItemTable(props) {
     return (
@@ -9,7 +10,7 @@ export default function ItemTable(props) {
             <View style={{width: '80%', paddingHorizontal: 5}}>
                 <Texto texto={props.exercicio} tam="Botao" />
             </View>
-            <View style={styles.divider} />
+            <Divider />
             <View style={{width: '20%', paddingHorizontal: 5}}>
                 <Texto texto={props.carga} tam="Botao" />
             </View>
@@ -34,10 +35,5 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.3,
         shadowRadius: 4,
         elevation: 8,
-    },
-    divider: {
-        height: '100%',
-        width: 1,
-        backgroundColor: 'white'
     }
 })

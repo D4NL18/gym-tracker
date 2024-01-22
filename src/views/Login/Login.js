@@ -6,7 +6,7 @@ import Texto from "../../components/Texto/Texto";
 import InputAndLabel from "../../components/InputAndLabel/InputAndLabel";
 import Button from "../../components/Button/Button";
 import TextButton from "../../components/TextButton/TextButton";
-import { width } from "../../components/Sizes/Sizes";
+import { height, width } from "../../components/Sizes/Sizes";
 import Modal from "../../components/Modal/Modal";
 
 export default function Login() {
@@ -43,10 +43,10 @@ export default function Login() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        padding: width * 0.2
+        paddingVertical: height * 0.2
     },
     containerTitulo: {
-        flex: 25,
+        flex: 20,
         justifyContent: "center",
     },
     containerForm: {
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
         justifyContent: "space-around",
     },
     containerTextButton: {
-        flex: 25,
+        flex: 20,
         justifyContent: "space-evenly",
     }
 })

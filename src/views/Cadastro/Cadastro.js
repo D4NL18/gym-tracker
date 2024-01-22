@@ -6,7 +6,7 @@ import Texto from "../../components/Texto/Texto";
 import InputAndLabel from "../../components/InputAndLabel/InputAndLabel";
 import Button from "../../components/Button/Button";
 import TextButton from "../../components/TextButton/TextButton";
-import { width } from "../../components/Sizes/Sizes";
+import { height, width } from "../../components/Sizes/Sizes";
 import Modal from "../../components/Modal/Modal";
 
 
@@ -44,18 +44,18 @@ export default function Cadastro() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        padding: width * 0.2
+        paddingVertical: height * 0.15
     },
     containerTitulo: {
-        flex: 20,
+        flex: 15,
         justifyContent: "center",
     },
     containerForm: {
-        flex: 60,
+        flex: 70,
         justifyContent: "space-around",
     },
     containerTextButton: {
-        flex: 20,
+        flex: 15,
         justifyContent: "space-evenly",
     }
 })

@@ -109,6 +109,8 @@ export default function App() {
       />
       <ButtonGoBack />
       <StatusBar style="auto" /> */}
+      {/* <Login /> */}
+      {/* <Cadastro /> */}
       {/* <SendEmail /> */}
       {/* <NewPassword /> */}
       <Menu />

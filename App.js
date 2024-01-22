@@ -14,6 +14,7 @@ import ButtonGoBack from './src/components/ButtonGoBack/ButtonGoBack';
 import Modal from './src/components/Modal/Modal';
 
 import Login from './src/views/Login/Login';
+import Cadastro from './src/views/Cadastro/Cadastro';
 
 
 
@@ -105,8 +106,8 @@ export default function App() {
       />
       <ButtonGoBack />
       <StatusBar style="auto" /> */}
+      <Cadastro />
       <ButtonGoBack />
-      <Login />
     </LinearGradient>
   );
 }

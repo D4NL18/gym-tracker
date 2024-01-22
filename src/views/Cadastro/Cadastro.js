@@ -34,7 +34,7 @@ export default function Cadastro() {
         <Modal
             isVisible={modalVisible}
             onClose={closeModal}
-            texto="Login e/ou Senha Incorreta"
+            texto="Registro realizado com sucesso!"
             textoBotao="OK"
         />
     </View>

@@ -6,7 +6,7 @@ import Texto from "../../components/Texto/Texto";
 import InputAndLabel from "../../components/InputAndLabel/InputAndLabel";
 import Button from "../../components/Button/Button";
 import TextButton from "../../components/TextButton/TextButton";
-import { width } from "../../components/Sizes/Sizes";
+import { height, width } from "../../components/Sizes/Sizes";
 import Modal from "../../components/Modal/Modal";
 
 export default function NewPassword() {
@@ -35,7 +35,7 @@ export default function NewPassword() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingVertical: width * 0.4,
+        paddingVertical: height * 0.2,
         justifyContent: "space-evenly"
     },
 })

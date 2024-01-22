@@ -16,6 +16,7 @@ import Modal from './src/components/Modal/Modal';
 import Login from './src/views/Login/Login';
 import Cadastro from './src/views/Cadastro/Cadastro';
 import SendEmail from './src/views/RecuperarSenha/SendEmail';
+import NewPassword from './src/views/RecuperarSenha/NewPassword';
 
 
 
@@ -107,7 +108,8 @@ export default function App() {
       />
       <ButtonGoBack />
       <StatusBar style="auto" /> */}
-      <SendEmail />
+      {/* <SendEmail /> */}
+      <NewPassword />
       <ButtonGoBack />
     </LinearGradient>
   );

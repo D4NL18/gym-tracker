@@ -13,6 +13,8 @@ import Table from './src/components/Table/Table';
 import ButtonGoBack from './src/components/ButtonGoBack/ButtonGoBack';
 import Modal from './src/components/Modal/Modal';
 
+import Login from './src/views/Login/Login';
+
 
 
 export default function App() {
@@ -75,7 +77,7 @@ export default function App() {
       locations={[0, 0.25, 0.5, 0.75, 1]}
       style={styles.container}
     >
-      <Texto texto="Login" tam="Grande" />
+      {/* <Texto texto="Login" tam="Grande" /> */}
       {/* <InputAndLabel texto="Nome" placeholder="Daniel" items={items} />
       <InputAndLabel texto="E-mail" placeholder="email@email.com" items={items} tipo="Select" />
       <InputAndLabel texto="Senha" placeholder="Senha" items={items} tipo="Senha" />
@@ -89,7 +91,7 @@ export default function App() {
       <ItemTable exercicio="Supino Retoaaaaaaaaaaaaaaaaaaaa" tipo="remove" /> */}
       {/* <Table data={data} /> */}
       {/* <Table data={data2} /> */}
-      <TouchableOpacity onPress={openModal}>
+      {/* <TouchableOpacity onPress={openModal}>
         <Texto texto="Abrir Modal" TextoBotao="Fechar" />
       </TouchableOpacity>
 
@@ -102,7 +104,9 @@ export default function App() {
         tipo="ModalInput"
       />
       <ButtonGoBack />
-      <StatusBar style="auto" />
+      <StatusBar style="auto" /> */}
+      <ButtonGoBack />
+      <Login />
     </LinearGradient>
   );
 }

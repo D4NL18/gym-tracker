@@ -1,7 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, TouchableOpacity } from 'react-native';
 import { useFonts } from 'expo-font';
 import { LinearGradient } from 'expo-linear-gradient';
+import { useState } from 'react';
 
 import Texto from './src/components/Texto/Texto';
 import InputAndLabel from './src/components/InputAndLabel/InputAndLabel';
@@ -10,10 +11,16 @@ import TextButton from './src/components/TextButton/TextButton';
 import ItemTable from './src/components/ItemTable/ItemTable';
 import Table from './src/components/Table/Table';
 import ButtonGoBack from './src/components/ButtonGoBack/ButtonGoBack';
+import Modal from './src/components/Modal/Modal';
 
 
 
 export default function App() {
+
+  const [modalVisible, setModalVisible] = useState(false);
+
+  const openModal = () => setModalVisible(true);
+  const closeModal = () => setModalVisible(false);
 
   let [fontsLoaded] = useFonts({
     'KeaniaOne-Regular': require('./assets/fonts/KeaniaOne-Regular.ttf'),
@@ -21,6 +28,8 @@ export default function App() {
   if (!fontsLoaded) {
     return undefined
   }
+
+
 
   items = [
     { label: 'Footbal', value: 'footballl' },
@@ -80,6 +89,18 @@ export default function App() {
       <ItemTable exercicio="Supino Retoaaaaaaaaaaaaaaaaaaaa" tipo="remove" /> */}
       {/* <Table data={data} /> */}
       {/* <Table data={data2} /> */}
+      <TouchableOpacity onPress={openModal}>
+        <Texto texto="Abrir Modal" TextoBotao="Fechar" />
+      </TouchableOpacity>
+
+      <Modal
+        isVisible={modalVisible}
+        onClose={closeModal}
+        texto="Titulo"
+        label="Label"
+        textoBotao="Fechar"
+        tipo="ModalInput"
+      />
       <ButtonGoBack />
       <StatusBar style="auto" />
     </LinearGradient>

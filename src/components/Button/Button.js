@@ -6,8 +6,12 @@ import { width } from "../Sizes/Sizes";
 
 export default function CustomButton(props) {
 
+    const handlePress = () => {
+        console.log("Botão pressionado!");
+      };
+
     return (
-        <TouchableOpacity style={styles.container}>
+        <TouchableOpacity style={styles.container} onPress={props.onPress}>
             <Texto tam="Botao" texto={props.texto} />
         </TouchableOpacity>
     )

@@ -7,6 +7,8 @@ import Texto from './src/components/Texto/Texto';
 import InputAndLabel from './src/components/InputAndLabel/InputAndLabel';
 import Button from './src/components/Button/Button';
 import TextButton from './src/components/TextButton/TextButton';
+import ItemTable from './src/components/ItemTable/ItemTable';
+import Table from './src/components/Table/Table';
 
 
 
@@ -24,6 +26,33 @@ export default function App() {
     { label: 'Baseball', value: 'baseball' },
     { label: 'Hockey', value: 'hockey' },
   ]
+
+  const data = [
+    { exercicio: 'Item 1', carga: '20', tipo: 'carga'  },
+    { exercicio: 'Item 2', carga: '30', tipo: 'carga'  },
+    { exercicio: 'Item 3', carga: '40', tipo: 'carga'  },
+    { exercicio: 'Item 4', carga: '20', tipo: 'carga'  },
+    { exercicio: 'Item 5', carga: '30', tipo: 'carga'  },
+    { exercicio: 'Item 6', carga: '40', tipo: 'carga'  },
+    { exercicio: 'Item 7', carga: '20', tipo: 'carga'  },
+    { exercicio: 'Item 8', carga: '30', tipo: 'carga'  },
+    { exercicio: 'Item 9', carga: '40', tipo: 'carga'  },
+    { exercicio: 'Item 10', carga: '20', tipo: 'carga'  },
+    { exercicio: 'Item 11', carga: '30', tipo: 'carga'  },
+    { exercicio: 'Item 12', carga: '40', tipo: 'carga'  },
+    { exercicio: 'Item 13', carga: '20', tipo: 'carga'  },
+    { exercicio: 'Item 14', carga: '30', tipo: 'carga'  },
+    { exercicio: 'Item 15', carga: '40', tipo: 'carga'  },
+    { exercicio: 'Item 16', carga: '20', tipo: 'carga'  },
+    { exercicio: 'Item 17', carga: '30', tipo: 'carga'  },
+    { exercicio: 'Item 18', carga: '40', tipo: 'carga'  },
+  ];
+
+  const data2 = [
+    { exercicio: 'Item 1', tipo: 'EditAndRemove'  },
+    { exercicio: 'Item 2', tipo: 'edit'  },
+    { exercicio: 'Item 3', tipo: 'remove'  },
+  ];
   return (
     <LinearGradient
       colors={[
@@ -37,12 +66,19 @@ export default function App() {
       style={styles.container}
     >
       <Texto texto="Login" tam="Grande" />
-      <InputAndLabel texto="Nome" placeholder="Daniel" items={items} />
+      {/* <InputAndLabel texto="Nome" placeholder="Daniel" items={items} />
       <InputAndLabel texto="E-mail" placeholder="email@email.com" items={items} tipo="Select" />
       <InputAndLabel texto="Senha" placeholder="Senha" items={items} tipo="Senha" />
       <Button texto="Entrar" />
       <TextButton texto="Não possui uma conta? Cadastre-se agora!" />
-      <TextButton texto="Esqueceu sua senha? Recupere ela aqui!" />
+      <TextButton texto="Esqueceu sua senha? Recupere ela aqui!" /> */}
+      {/* <ItemTable exercicio="Supino Retoaaaaaaaaaaaa" carga="20" tipo="carga" />
+      <ItemTable exercicio="Supino Reto" carga="20" tipo="carga" />
+      <ItemTable exercicio="Supino Reto" tipo="edit" />
+      <ItemTable exercicio="Supino Reto" tipo="EditAndRemove" />
+      <ItemTable exercicio="Supino Retoaaaaaaaaaaaaaaaaaaaa" tipo="remove" /> */}
+      <Table data={data} />
+      {/* <Table data={data2} /> */}
       <StatusBar style="auto" />
     </LinearGradient>
   );

@@ -4,11 +4,7 @@ import Texto from "../Texto/Texto";
 
 import { width } from "../Sizes/Sizes";
 
-export default function CustomButton(props) {
-
-    const handlePress = () => {
-        console.log("Botão pressionado!");
-      };
+export default function Button(props) {
 
     return (
         <TouchableOpacity style={styles.container} onPress={props.onPress}>
@@ -30,6 +26,7 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.3,
         shadowRadius: 4,
         elevation: 8,
-        padding: 7
+        padding: 7,
+        marginVertical: 5
     }
 });

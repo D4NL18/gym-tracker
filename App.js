@@ -9,6 +9,7 @@ import Button from './src/components/Button/Button';
 import TextButton from './src/components/TextButton/TextButton';
 import ItemTable from './src/components/ItemTable/ItemTable';
 import Table from './src/components/Table/Table';
+import ButtonGoBack from './src/components/ButtonGoBack/ButtonGoBack';
 
 
 
@@ -77,8 +78,9 @@ export default function App() {
       <ItemTable exercicio="Supino Reto" tipo="edit" />
       <ItemTable exercicio="Supino Reto" tipo="EditAndRemove" />
       <ItemTable exercicio="Supino Retoaaaaaaaaaaaaaaaaaaaa" tipo="remove" /> */}
-      <Table data={data} />
+      {/* <Table data={data} /> */}
       {/* <Table data={data2} /> */}
+      <ButtonGoBack />
       <StatusBar style="auto" />
     </LinearGradient>
   );

@@ -1,21 +1,61 @@
 import { StyleSheet, View } from "react-native";
 
+import Ionicons from '@expo/vector-icons/Ionicons';
+
 import { width } from "../Sizes/Sizes";
 import Texto from '../Texto/Texto'
 import Divider from "../Divider/Divider";
 
 export default function ItemTable(props) {
-    return (
-        <View style={styles.container}>
-            <View style={{width: '80%', paddingHorizontal: 5}}>
-                <Texto texto={props.exercicio} tam="Botao" />
+    if (props.tipo == "EditAndRemove") {
+        return (
+            <View style={styles.container}>
+                <View style={{ width: '70%', paddingHorizontal: 5 }}>
+                    <Texto texto={props.exercicio} tam="Botao" />
+                </View>
+
+                <View style={{ width: '30%', paddingHorizontal: 5, justifyContent: "space-around", flexDirection: "row" }}>
+                    <Ionicons
+                        name="pencil"
+                        size={32}
+                        color="white" />
+                    <Ionicons
+                        name="trash"
+                        size={32}
+                        color="white" />
+                </View>
             </View>
-            <Divider />
-            <View style={{width: '20%', paddingHorizontal: 5}}>
-                <Texto texto={props.carga} tam="Botao" />
+        )
+    } else if (props.tipo == "carga") {
+        return (
+            <View style={styles.container}>
+                <View style={{ width: '80%', paddingHorizontal: 5 }}>
+                    <Texto texto={props.exercicio} tam="Botao" />
+                </View>
+                <Divider />
+                <View style={{ width: '20%', paddingHorizontal: 5 }}>
+                    <Texto texto={props.carga} tam="Botao" />
+                </View>
             </View>
-        </View>
-    )
+
+        )
+    } else {
+        return (
+            <View style={styles.container}>
+                <View style={{ width: '80%', paddingHorizontal: 5 }}>
+                    <Texto texto={props.exercicio} tam="Botao" />
+                </View>
+                <Divider />
+                <View style={{ width: '20%', paddingHorizontal: 5, alignItems: "center" }}>
+                    <Ionicons
+                        name={props.tipo === "edit" ? "pencil" : props.tipo === "remove" ? "trash" : ""}
+                        size={32}
+                        color="white" />
+                </View>
+            </View>
+        )
+
+    }
 }
 
 const styles = StyleSheet.create({

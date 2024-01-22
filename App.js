@@ -8,7 +8,6 @@ import InputAndLabel from './src/components/InputAndLabel/InputAndLabel';
 import Button from './src/components/Button/Button';
 import TextButton from './src/components/TextButton/TextButton';
 import ItemTable from './src/components/ItemTable/ItemTable';
-import ItemWithCRUD from './src/components/ItemWithCRUD/ItemWithCRUD';
 
 
 
@@ -45,11 +44,11 @@ export default function App() {
       <Button texto="Entrar" />
       <TextButton texto="Não possui uma conta? Cadastre-se agora!" />
       <TextButton texto="Esqueceu sua senha? Recupere ela aqui!" /> */}
-      <ItemTable exercicio="Supino Retoaaaaaaaaaaaa" carga="20" />
-      <ItemTable exercicio="Supino Reto" carga="20" />
-      <ItemWithCRUD exercicio="Supino Reto" tipo="edit" />
-      <ItemWithCRUD exercicio="Supino Reto" tipo="EditAndRemove" />
-      <ItemWithCRUD exercicio="Supino Retoaaaaaaaaaaaaaaaaaaaa" tipo="remove" />
+      <ItemTable exercicio="Supino Retoaaaaaaaaaaaa" carga="20" tipo="carga" />
+      <ItemTable exercicio="Supino Reto" carga="20" tipo="carga" />
+      <ItemTable exercicio="Supino Reto" tipo="edit" />
+      <ItemTable exercicio="Supino Reto" tipo="EditAndRemove" />
+      <ItemTable exercicio="Supino Retoaaaaaaaaaaaaaaaaaaaa" tipo="remove" />
       <StatusBar style="auto" />
     </LinearGradient>
   );

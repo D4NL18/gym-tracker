@@ -12,32 +12,42 @@ import Modal from "../Modal/Modal";
 export default function ItemTable(props) {
 
     const [modalVisible, setModalVisible] = useState(false);
-    const [exercicio, setExercicio] = useState("");
 
     const openModal = (exercicio) => {
         setModalVisible(true);
-        setExercicio(exercicio);
     }
     const closeModal = () => setModalVisible(false);
 
     if (props.tipo == "EditAndRemove") {
         return (
-            <View style={styles.container}>
+            <TouchableOpacity style={styles.container}>
                 <View style={{ width: '70%', paddingHorizontal: 5 }}>
-                    <Texto texto={props.exercicio} tam="Botao" />
+                    <Texto texto={props.sigla ?`Treino ${props.sigla} - ${props.nome}` : props.exercicio} tam="Botao" />
                 </View>
 
                 <View style={{ width: '30%', paddingHorizontal: 5, justifyContent: "space-around", flexDirection: "row" }}>
+                    <TouchableOpacity onPress={openModal}>
                     <Ionicons
                         name="pencil"
                         size={32}
                         color="white" />
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={openModal}>
                     <Ionicons
                         name="trash"
                         size={32}
                         color="white" />
+                    </TouchableOpacity>
                 </View>
-            </View>
+                <Modal
+                    isVisible={modalVisible}
+                    onClose={closeModal}
+                    texto={props.sigla ?`Treino ${props.sigla} - ${props.nome}` : props.exercicio}
+                    textoBotao="Confirmar"
+                    tipo="ModalInput"
+                    label="Nome"
+                />
+            </TouchableOpacity>
         )
     } else {
         return (

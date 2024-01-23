@@ -20,6 +20,8 @@ import NewPassword from './src/views/RecuperarSenha/NewPassword';
 import Menu from './src/views/Menu/Menu';
 import TreinarAgora from './src/views/TreinarAgora/TreinarAgora';
 import TreinoDeHoje from './src/views/TreinarAgora/TreinoDeHoje';
+import Treinos from './src/views/Treinos_e_Exercicios/Treinos';
+import Exercicios from './src/views/Treinos_e_Exercicios/Exercicios';
 
 
 
@@ -117,7 +119,9 @@ export default function App() {
       {/* <NewPassword /> */}
       {/* <Menu /> */}
       {/* <TreinarAgora /> */}
-      <TreinoDeHoje />
+      {/* <TreinoDeHoje /> */}
+      <Treinos />
+      {/* <Exercicios /> */}
       <ButtonGoBack />
     </LinearGradient>
   );

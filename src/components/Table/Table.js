@@ -12,9 +12,9 @@ export default function Table(props) {
 
     return (
         <View style={styles.container}>
-            <ScrollView style={styles.scrollView}>
+            <ScrollView>
                 {data.map((item, index) => (
-                    <ItemTable key={index} tipo={item.tipo} carga={item.carga} exercicio={item.exercicio} />
+                    <ItemTable key={index} tipo={item.tipo} carga={item.carga} exercicio={item.exercicio} nome={item.nome} sigla={item.sigla}/>
                 ))}
             </ScrollView>
 
@@ -23,11 +23,10 @@ export default function Table(props) {
 }
 
 const styles = StyleSheet.create({
-    scrollView: {
-        flex: 1,
-    },
     container: {
-        height: height * 0.7,
-        marginVertical: 10
+        maxHeight: height * 0.5,
+        marginVertical: 10,
+        display: "flex",
+        justifyContent: "center"
     },
 });

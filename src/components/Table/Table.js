@@ -17,7 +17,6 @@ export default function Table(props) {
                     <ItemTable key={index} tipo={item.tipo} carga={item.carga} exercicio={item.exercicio} nome={item.nome} sigla={item.sigla}/>
                 ))}
             </ScrollView>
-
         </View>
     )
 }

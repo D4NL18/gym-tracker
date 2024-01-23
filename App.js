@@ -18,6 +18,7 @@ import Cadastro from './src/views/Cadastro/Cadastro';
 import SendEmail from './src/views/RecuperarSenha/SendEmail';
 import NewPassword from './src/views/RecuperarSenha/NewPassword';
 import Menu from './src/views/Menu/Menu';
+import TreinarAgora from './src/views/TreinarAgora/TreinarAgora';
 
 
 
@@ -113,7 +114,8 @@ export default function App() {
       {/* <Cadastro /> */}
       {/* <SendEmail /> */}
       {/* <NewPassword /> */}
-      <Menu />
+      {/* <Menu /> */}
+      <TreinarAgora />
       <ButtonGoBack />
     </LinearGradient>
   );

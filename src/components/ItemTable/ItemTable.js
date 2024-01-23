@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import { StyleSheet, TouchableOpacity, View } from "react-native";
 
 import Ionicons from '@expo/vector-icons/Ionicons';
@@ -5,8 +7,18 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import { width } from "../Sizes/Sizes";
 import Texto from '../Texto/Texto'
 import Divider from "../Divider/Divider";
+import Modal from "../Modal/Modal";
 
 export default function ItemTable(props) {
+
+    const [modalVisible, setModalVisible] = useState(false);
+    const [exercicio, setExercicio] = useState("");
+
+    const openModal = (exercicio) => {
+        setModalVisible(true);
+        setExercicio(exercicio);
+    }
+    const closeModal = () => setModalVisible(false);
 
     if (props.tipo == "EditAndRemove") {
         return (
@@ -29,7 +41,7 @@ export default function ItemTable(props) {
         )
     } else {
         return (
-            <TouchableOpacity style={styles.container} onPress={props.onPress}>
+            <TouchableOpacity style={styles.container} onPress={openModal}>
                 <View style={{ width: '80%', paddingHorizontal: 5 }}>
                     <Texto texto={props.exercicio} tam="Botao" />
                 </View>
@@ -37,28 +49,18 @@ export default function ItemTable(props) {
                 <View style={{ width: '20%', paddingHorizontal: 5 }}>
                     <Texto texto={props.carga} tam="Botao" />
                 </View>
-
+                <Modal
+                    isVisible={modalVisible}
+                    onClose={closeModal}
+                    texto={props.exercicio}
+                    textoBotao="Confirmar"
+                    tipo="ModalInput"
+                    label="Carga"
+                />
             </TouchableOpacity>
 
         )
     }
-    //  else {
-    //     return (
-    //         <View style={styles.container}>
-    //             <View style={{ width: '80%', paddingHorizontal: 5 }}>
-    //                 <Texto texto={props.exercicio} tam="Botao" />
-    //             </View>
-    //             <Divider />
-    //             <View style={{ width: '20%', paddingHorizontal: 5, alignItems: "center" }}>
-    //                 <Ionicons
-    //                     name={props.tipo === "edit" ? "pencil" : props.tipo === "remove" ? "trash" : ""}
-    //                     size={32}
-    //                     color="white" />
-    //             </View>
-    //         </View>
-    //     )
-
-    // }
 }
 
 const styles = StyleSheet.create({

@@ -12,11 +12,9 @@ import Modal from "../Modal/Modal";
 export default function ItemTable(props) {
 
     const [modalVisible, setModalVisible] = useState(false);
-    const [exercicio, setExercicio] = useState("");
 
     const openModal = (exercicio) => {
         setModalVisible(true);
-        setExercicio(exercicio);
     }
     const closeModal = () => setModalVisible(false);
 
@@ -24,7 +22,7 @@ export default function ItemTable(props) {
         return (
             <View style={styles.container}>
                 <View style={{ width: '70%', paddingHorizontal: 5 }}>
-                    <Texto texto={props.exercicio} tam="Botao" />
+                    <Texto texto={`Treino ${props.sigla} - ${props.nome}`} tam="Botao" />
                 </View>
 
                 <View style={{ width: '30%', paddingHorizontal: 5, justifyContent: "space-around", flexDirection: "row" }}>

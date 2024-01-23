@@ -32,9 +32,9 @@ export default function TreinoDeHoje() {
                 <Texto tam="Medio" texto="Treinar Agora!" />
                 <Texto tam="Subtitle" texto={formattedDate} />
             </View >
-            <ScrollView style={styles.ContainerItems}>
+            <View style={styles.ContainerItems}>
                 <Table data={data} />
-            </ScrollView>
+            </View>
             <Button texto="Finalizar Treino" />
 
         </View >
@@ -43,12 +43,13 @@ export default function TreinoDeHoje() {
 
 const styles = StyleSheet.create({
     container: {
-        paddingVertical: height * 0.1,
         flex: 1,
-        justifyContent: "space-around",
+        justifyContent: "center",
         alignItems: "center"
     },
     ContainerItems: {
-        marginVertical: 20
+        display: "flex",
+        justifyContent: "center",
+        marginVertical: 20,
     }
 })

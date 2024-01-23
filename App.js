@@ -22,6 +22,7 @@ import TreinarAgora from './src/views/TreinarAgora/TreinarAgora';
 import TreinoDeHoje from './src/views/TreinarAgora/TreinoDeHoje';
 import Treinos from './src/views/Treinos_e_Exercicios/Treinos';
 import Exercicios from './src/views/Treinos_e_Exercicios/Exercicios';
+import AdicionarTreino from './src/views/AdicionarTreino/AdicionarTreino';
 
 
 
@@ -118,10 +119,11 @@ export default function App() {
       {/* <SendEmail /> */}
       {/* <NewPassword /> */}
       {/* <Menu /> */}
-      {/* <TreinarAgora /> */}
+      <TreinarAgora />
       {/* <TreinoDeHoje /> */}
       {/* <Treinos /> */}
-      <Exercicios />
+      {/* <Exercicios /> */}
+      {/* <AdicionarTreino /> */}
       <ButtonGoBack />
     </LinearGradient>
   );

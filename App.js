@@ -120,8 +120,8 @@ export default function App() {
       {/* <Menu /> */}
       {/* <TreinarAgora /> */}
       {/* <TreinoDeHoje /> */}
-      <Treinos />
-      {/* <Exercicios /> */}
+      {/* <Treinos /> */}
+      <Exercicios />
       <ButtonGoBack />
     </LinearGradient>
   );

@@ -3,6 +3,7 @@ import { StyleSheet, View } from "react-native";
 import Texto from "../../components/Texto/Texto";
 import Table from "../../components/Table/Table";
 
+
 export default function Exercicios() {
 
     const data = [

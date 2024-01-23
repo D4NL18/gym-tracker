@@ -18,6 +18,8 @@ import Cadastro from './src/views/Cadastro/Cadastro';
 import SendEmail from './src/views/RecuperarSenha/SendEmail';
 import NewPassword from './src/views/RecuperarSenha/NewPassword';
 import Menu from './src/views/Menu/Menu';
+import TreinarAgora from './src/views/TreinarAgora/TreinarAgora';
+import TreinoDeHoje from './src/views/TreinarAgora/TreinoDeHoje';
 
 
 
@@ -44,30 +46,30 @@ export default function App() {
   ]
 
   const data = [
-    { exercicio: 'Item 1', carga: '20', tipo: 'carga'  },
-    { exercicio: 'Item 2', carga: '30', tipo: 'carga'  },
-    { exercicio: 'Item 3', carga: '40', tipo: 'carga'  },
-    { exercicio: 'Item 4', carga: '20', tipo: 'carga'  },
-    { exercicio: 'Item 5', carga: '30', tipo: 'carga'  },
-    { exercicio: 'Item 6', carga: '40', tipo: 'carga'  },
-    { exercicio: 'Item 7', carga: '20', tipo: 'carga'  },
-    { exercicio: 'Item 8', carga: '30', tipo: 'carga'  },
-    { exercicio: 'Item 9', carga: '40', tipo: 'carga'  },
-    { exercicio: 'Item 10', carga: '20', tipo: 'carga'  },
-    { exercicio: 'Item 11', carga: '30', tipo: 'carga'  },
-    { exercicio: 'Item 12', carga: '40', tipo: 'carga'  },
-    { exercicio: 'Item 13', carga: '20', tipo: 'carga'  },
-    { exercicio: 'Item 14', carga: '30', tipo: 'carga'  },
-    { exercicio: 'Item 15', carga: '40', tipo: 'carga'  },
-    { exercicio: 'Item 16', carga: '20', tipo: 'carga'  },
-    { exercicio: 'Item 17', carga: '30', tipo: 'carga'  },
-    { exercicio: 'Item 18', carga: '40', tipo: 'carga'  },
+    { exercicio: 'Item 1', carga: '20', tipo: 'carga' },
+    { exercicio: 'Item 2', carga: '30', tipo: 'carga' },
+    { exercicio: 'Item 3', carga: '40', tipo: 'carga' },
+    { exercicio: 'Item 4', carga: '20', tipo: 'carga' },
+    { exercicio: 'Item 5', carga: '30', tipo: 'carga' },
+    { exercicio: 'Item 6', carga: '40', tipo: 'carga' },
+    { exercicio: 'Item 7', carga: '20', tipo: 'carga' },
+    { exercicio: 'Item 8', carga: '30', tipo: 'carga' },
+    { exercicio: 'Item 9', carga: '40', tipo: 'carga' },
+    { exercicio: 'Item 10', carga: '20', tipo: 'carga' },
+    { exercicio: 'Item 11', carga: '30', tipo: 'carga' },
+    { exercicio: 'Item 12', carga: '40', tipo: 'carga' },
+    { exercicio: 'Item 13', carga: '20', tipo: 'carga' },
+    { exercicio: 'Item 14', carga: '30', tipo: 'carga' },
+    { exercicio: 'Item 15', carga: '40', tipo: 'carga' },
+    { exercicio: 'Item 16', carga: '20', tipo: 'carga' },
+    { exercicio: 'Item 17', carga: '30', tipo: 'carga' },
+    { exercicio: 'Item 18', carga: '40', tipo: 'carga' },
   ];
 
   const data2 = [
-    { exercicio: 'Item 1', tipo: 'EditAndRemove'  },
-    { exercicio: 'Item 2', tipo: 'edit'  },
-    { exercicio: 'Item 3', tipo: 'remove'  },
+    { exercicio: 'Item 1', tipo: 'EditAndRemove' },
+    { exercicio: 'Item 2', tipo: 'edit' },
+    { exercicio: 'Item 3', tipo: 'remove' },
   ];
   return (
     <LinearGradient
@@ -113,7 +115,9 @@ export default function App() {
       {/* <Cadastro /> */}
       {/* <SendEmail /> */}
       {/* <NewPassword /> */}
-      <Menu />
+      {/* <Menu /> */}
+      {/* <TreinarAgora /> */}
+      <TreinoDeHoje />
       <ButtonGoBack />
     </LinearGradient>
   );

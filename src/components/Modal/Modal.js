@@ -1,4 +1,3 @@
-import React from "react";
 import { StyleSheet, View, Text, Modal, TouchableOpacity } from "react-native";
 import { LinearGradient } from 'expo-linear-gradient';
 import Texto from "../Texto/Texto";

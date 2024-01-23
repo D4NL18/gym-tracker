@@ -22,7 +22,7 @@ export default function ItemTable(props) {
         return (
             <TouchableOpacity style={styles.container}>
                 <View style={{ width: '70%', paddingHorizontal: 5 }}>
-                    <Texto texto={`Treino ${props.sigla} - ${props.nome}`} tam="Botao" />
+                    <Texto texto={props.sigla ?`Treino ${props.sigla} - ${props.nome}` : props.exercicio} tam="Botao" />
                 </View>
 
                 <View style={{ width: '30%', paddingHorizontal: 5, justifyContent: "space-around", flexDirection: "row" }}>
@@ -42,7 +42,7 @@ export default function ItemTable(props) {
                 <Modal
                     isVisible={modalVisible}
                     onClose={closeModal}
-                    texto={`Treino ${props.sigla} - ${props.nome}`}
+                    texto={props.sigla ?`Treino ${props.sigla} - ${props.nome}` : props.exercicio}
                     textoBotao="Confirmar"
                     tipo="ModalInput"
                     label="Nome"

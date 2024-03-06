@@ -8,12 +8,6 @@ export default function Input(props) {
   const [selectedValue, setSelectedValue] = useState(null);
 
   if (props.tipo === "Select") {
-    const renderCustomIcon = () => (
-      <View style={styles.iconContainer}>
-        <Image source={IconSelect} style={styles.icon} />
-      </View>
-    );
-
     return (
       <View style={styles.pickerContainer}>
         <RNPickerSelect

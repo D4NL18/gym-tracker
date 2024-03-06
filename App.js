@@ -118,8 +118,8 @@ export default function App() {
       {/* <Cadastro /> */}
       {/* <SendEmail /> */}
       {/* <NewPassword /> */}
-      {/* <Menu /> */}
-      <TreinarAgora />
+      <Menu />
+      {/* <TreinarAgora /> */}
       {/* <TreinoDeHoje /> */}
       {/* <Treinos /> */}
       {/* <Exercicios /> */}

@@ -1,15 +1,11 @@
-import { useState } from "react";
-
 import { View, StyleSheet } from "react-native";
 
 import { LinearGradient } from 'expo-linear-gradient';
 
 import Texto from "../../components/Texto/Texto";
-import InputAndLabel from "../../components/InputAndLabel/InputAndLabel";
 import Button from "../../components/Button/Button";
-import TextButton from "../../components/TextButton/TextButton";
-import { height, width } from "../../components/Sizes/Sizes";
-import Modal from "../../components/Modal/Modal";
+import { height } from "../../components/Sizes/Sizes";
+
 
     export default function Menu({navigation}) {
 

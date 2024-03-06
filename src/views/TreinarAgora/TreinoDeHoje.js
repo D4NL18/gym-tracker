@@ -1,12 +1,12 @@
 import { ScrollView, StyleSheet, View } from "react-native";
 
-import { height } from "../../components/Sizes/Sizes";
+import { LinearGradient } from 'expo-linear-gradient';
+
 import Texto from "../../components/Texto/Texto";
 import Button from "../../components/Button/Button";
 import Table from "../../components/Table/Table";
-import Modal from "../../components/Modal/Modal";
 
-export default function TreinoDeHoje() {
+export default function TreinoDeHoje({ navigation }) {
 
     const data = [
         { exercicio: 'Supino Reto', carga: '27.5', tipo: 'carga' },
@@ -27,7 +27,17 @@ export default function TreinoDeHoje() {
     })
 
     return (
-        <View style={styles.container} >
+        <LinearGradient
+            colors={[
+                'rgba(235,0,255,0.85)',   // EB00FF em 85%
+                'rgba(173,9,238,0.85)',   // AD09EE em 85%
+                'rgba(173,9,238,1)',      // AD09EE em 100%
+                'rgba(173,9,238,0.85)',   // AD09EE em 85%
+                'rgba(235,0,255,0.8)'     // EB00FF em 80%
+            ]}
+            locations={[0, 0.25, 0.5, 0.75, 1]}
+            style={styles.container}
+        >
             <View >
                 <Texto tam="Medio" texto="Treinar Agora!" />
                 <Texto tam="Subtitle" texto={formattedDate} />
@@ -35,9 +45,8 @@ export default function TreinoDeHoje() {
             <View style={styles.ContainerItems}>
                 <Table data={data} />
             </View>
-            <Button texto="Finalizar Treino" />
-
-        </View >
+            <Button texto="Finalizar Treino"  onPress={() => navigation.navigate('Menu')} />
+        </LinearGradient >
     )
 }
 

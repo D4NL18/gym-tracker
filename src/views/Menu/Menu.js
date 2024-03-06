@@ -11,7 +11,7 @@ import TextButton from "../../components/TextButton/TextButton";
 import { height, width } from "../../components/Sizes/Sizes";
 import Modal from "../../components/Modal/Modal";
 
-export default function Menu(navigation) {
+    export default function Menu({navigation}) {
 
     return (
         <LinearGradient
@@ -25,15 +25,12 @@ export default function Menu(navigation) {
             locations={[0, 0.25, 0.5, 0.75, 1]}
             style={styles.container}
         >
-
             <Texto texto="Menu" tam="Grande" />
             <View style={styles.containerBotoes}>
-                <Button texto="Treinar Agora!" />
-                <Button texto="Treinos e Exercícios" />
+                <Button texto="Treinar Agora!" onPress={() => navigation.navigate('TreinarAgora')} />
+                <Button texto="Treinos e Exercícios" onPress={() => navigation.navigate('Treinos')} />
                 <Button texto="Evolução" />
             </View>
-
-
         </LinearGradient>
     )
 }

@@ -15,6 +15,7 @@ export default function Input(props) {
           placeholder={{ label: props.placeholder, value: null }}
           items={props.items}
           onValueChange={(value) => setSelectedValue(value)}
+          value={selectedValue}
         />
       </View>
     );

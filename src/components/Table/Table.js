@@ -14,7 +14,7 @@ export default function Table(props) {
         <View style={styles.container}>
             <ScrollView>
                 {data.map((item, index) => (
-                    <ItemTable key={index} tipo={item.tipo} carga={item.carga} exercicio={item.exercicio} nome={item.nome} sigla={item.sigla}/>
+                    <ItemTable key={index} tipo={item.tipo} carga={item.carga} exercicio={item.exercicio} nome={item.nome} sigla={item.sigla} onPress={props.onPress}/>
                 ))}
             </ScrollView>
         </View>

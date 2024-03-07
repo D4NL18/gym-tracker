@@ -20,7 +20,7 @@ export default function ItemTable(props) {
 
     if (props.tipo == "EditAndRemove") {
         return (
-            <TouchableOpacity style={styles.container}>
+            <TouchableOpacity style={styles.container} onPress={props.onPress}>
                 <View style={{ width: '70%', paddingHorizontal: 5 }}>
                     <Texto texto={props.sigla ?`Treino ${props.sigla} - ${props.nome}` : props.exercicio} tam="Botao" />
                 </View>

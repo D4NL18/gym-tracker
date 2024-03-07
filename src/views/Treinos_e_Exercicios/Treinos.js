@@ -2,13 +2,15 @@ import { useState } from "react";
 
 import { ScrollView, StyleSheet, View } from "react-native";
 
+import { LinearGradient } from 'expo-linear-gradient';
+
 import Texto from "../../components/Texto/Texto";
 import Table from "../../components/Table/Table";
 import Button from "../../components/Button/Button";
 import Modal from "../../components/Modal/Modal";
 import { height } from "../../components/Sizes/Sizes";
 
-export default function Treinos() {
+export default function Treinos({navigation}) {
 
     const [modalVisible, setModalVisible] = useState(false);
 
@@ -26,10 +28,20 @@ export default function Treinos() {
     ];
 
     return (
-        <View style={styles.container}>
+        <LinearGradient
+            colors={[
+                'rgba(235,0,255,0.85)',   // EB00FF em 85%
+                'rgba(173,9,238,0.85)',   // AD09EE em 85%
+                'rgba(173,9,238,1)',      // AD09EE em 100%
+                'rgba(173,9,238,0.85)',   // AD09EE em 85%
+                'rgba(235,0,255,0.8)'     // EB00FF em 80%
+            ]}
+            locations={[0, 0.25, 0.5, 0.75, 1]}
+            style={styles.container}
+        >
             <Texto texto="Treinos e Exercicios" tam="Medio" />
             <View style={styles.ContainerItems}>
-                <Table data={data} />
+                <Table data={data} onPress={() => navigation.navigate('Exercicios')} />
             </View>
             <Button texto="Adicionar Novo Treino" onPress={openModal} />
             <Modal
@@ -40,7 +52,7 @@ export default function Treinos() {
                     tipo="ModalInput"
                     label="Nome"
                 />
-        </View>
+        </LinearGradient>
     )
 }
 
